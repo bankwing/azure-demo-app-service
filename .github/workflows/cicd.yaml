@@ -26,7 +26,7 @@ jobs:
     - name: Azure WebApp
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
         package: build/libs/*-${{ steps.get-version.outputs.app_version }}.jar
 
     # Azure logout 
